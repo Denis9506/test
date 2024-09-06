@@ -1,0 +1,159 @@
+.container {
+    width: 800px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0);
+    box-shadow: 0 0 25px rgba(0, 0, 0, 1);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    box-sizing: border-box;
+    border: none;
+}
+input[type="tel"] {
+    width: 100px;
+}
+
+select {
+    height: 35px;
+}
+
+textarea {
+    height: 150px;
+    max-width: 640px;
+    min-width: 640px;
+    min-height: 50px;
+    max-height: 200px;
+}
+
+input[type="submit"] {
+    color: white;
+    background-color: rgba(255, 255, 255, 0);
+    cursor: pointer;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    border: 2px solid white;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+input[type="submit"]:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+h2, p, label {
+    font-size: 1.5em;
+    color: white;
+}
+
+.forName, .forEmail, .forPhone, .forMessage, .forTextarea, .forButtonSubmit {
+    display: grid;
+    grid-template-columns: 20% 80%; 
+    align-items: center;
+}
+
+.forTextarea {
+    align-items: flex-start;
+}
+
+.forInputName, .forInputPhone {
+    display: flex;
+}
+
+.forButtonSubmit {
+    text-align: center;
+}
+
+.forInputName input[type="text"] + input[type="text"],
+.forInputPhone input[type="tel"] + input[type="tel"] {
+    margin-left: 20px;
+}
+
+#name, #phone {
+    padding: 10px 0;
+    padding-left: 10px;
+}
+
+@media only screen and (max-width: 750px) {
+    .container {
+        width: 100%;
+        padding: 10px;
+        box-shadow: none;
+    }
+    
+    .forName, .forEmail, .forPhone, .forMessage, .forTextarea, .forButtonSubmit {
+        grid-template-columns: 100%;
+        grid-template-rows: auto;
+        text-align: left;
+    }
+    .forInputName input[type="text"] + input[type="text"],
+    .forInputPhone input[type="tel"] + input[type="tel"] {
+         margin-left: 0px;
+    }
+    .forName label,
+    .forEmail label,
+    .forMessage label,
+    .forTextarea label {
+        margin-bottom: 5px;
+    }
+
+    .forInputName, .forInputPhone {
+        flex-direction: column;
+    }
+
+    .forInputName input[type="text"],
+    .forInputPhone input[type="tel"] {
+        width: 100%;
+        margin: 0 0 10px 0;
+    }
+
+    textarea {
+        width: 100%;
+        max-width: 100%;
+        min-width: 100%;
+    }
+
+    input[type="submit"] {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    h2, p, label {
+        font-size: 1.2em;
+    }
+}
+
+
+
+#send{
+    margin-top: 0;
+}
+
+.confirmation-message {
+    display: none;
+    margin: 20px 0 ;
+    font-family: 'Metal Mania', cursive;
+    font-size: 4vw;
+    text-align: center;
+    color: #000;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.fade-in {
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+

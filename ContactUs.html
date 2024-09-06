@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Contact us</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <link href="css/reset.css" rel="stylesheet">
+    <link href="lightbox/css/lightbox.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Metal+Mania" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
+    <script src="https://use.fontawesome.com/0ca06f29a6.js"></script>
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/sub.css" rel="stylesheet">
+    <link href="css/contactus.css" rel="stylesheet">
+</head>
+<body>
+    <header id="header">
+        <div id="topbar">
+            <div class="cont">
+                <nav>
+                    <ul class="menu">
+                        <li><a href="index.html">BACK TO MAIN</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="cont">
+            <h1 class="subscribe">Contact Us</h1>
+        </div>
+    </header>
+    <div class="cont">
+        <form action="#" method="post" id="ContactForm">
+            <div class="forName">
+                <label>Your name</label>
+                <div class="forInputName">
+                    <input type="text" id="first_name" name="first_name" placeholder="first name" required>
+                    <input type="text" id="last_name" name="last_name" placeholder="last name" required>
+                </div>
+            </div>
+            <div class="forEmail">
+                <label for="email">Your email</label>
+                <input type="email" id="email" name="email" placeholder="your_mail@mail.com" required>
+            </div>
+            <div class="forMessage">
+                <label for="topic">Message subject*</label>
+                <select id="topic" name="topic" required>
+                    <option value="" disabled selected>Select an option</option>
+                    <option value="Общий вопрос">Общий вопрос</option>
+                    <option value="Техническая поддержка">Техническая поддержка</option>
+                    <option value="Другое">Другое</option>
+                </select>
+            </div>
+            <div class="forTextarea">
+                <label for="message">Message*</label>
+                <textarea cols="30" rows="5" id="message" name="message" required></textarea>
+            </div>
+            <div class="forCaptcha">
+                <label for="captcha">Enter the captcha*</label>
+                <div id="generated-captcha" class="captcha-box"></div>
+                <input type="text" id="captcha" name="captcha" placeholder="Enter the captcha" required>
+            </div>
+            <hr>
+            <div class="forButtonSubmit">
+                <p></p>
+                <input type="submit" value="SUBMIT FORM">
+            </div>
+        </form>
+        <div id="confirmation-message" class="confirmation-message fade-in" style="display: none;">
+            Sent
+        </div>
+    </div>
+    <footer class="bg-g">
+        <div class="cont">
+            <div class="social">
+                <a href="#"><i class="fa fa-facebook-official"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-youtube"></i></a>
+                <a href="#"><i class="fa fa-apple"></i></a>
+                <a href="#"><i class="fa fa-spotify"></i></a>
+                <a href="#"><i class="fa fa-soundcloud"></i></a>
+            </div>
+            <p class="copyright">@All Rights Reserved</p>
+        </div>
+    </footer>
+    <script src="scritps/contact.js"></script>
+</body>
+</html>

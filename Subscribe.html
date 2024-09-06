@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/reset.css" rel="stylesheet">
+    <link href="lightbox/css/lightbox.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Metal+Mania" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
+    <script src="https://use.fontawesome.com/0ca06f29a6.js"></script>
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/sub.css" rel="stylesheet">
+    <title>SUBSCRIBE</title>
+</head>
+<body>
+    <header id="header">
+        <div id="topbar">
+            <div class="cont">
+                <nav>
+                    <ul class="menu">
+                        <li><a href="index.html">BACK TO MAIN</a></li>
+                    </ul>
+                </nav>
+            </div>           
+        </div>
+        <div class="cont">
+            <h1 class="subscribe">Subscribe</h1>
+        </div>
+    </header>
+    <div class="cont" >
+        <form id="subscribe-form" action="subscribe.php" method="post" onsubmit="return validateCaptcha()">
+            <div class="contact-column">
+                <div class="item-flex">
+                    <label for="name">Name *</label>
+                    <input type="text" name="name" id="name" required>
+                </div>
+                <div class="item-flex">
+                    <label for="email">Email *</label>
+                    <input type="email" name="email" id="email" required>
+                </div>
+                <div class="item-flex">
+                    <label for="interest">You are interested in</label>
+                    <textarea name="interest" id="interest" cols="30" rows="5" required></textarea>
+                </div>
+                <div class="item-flex">
+                    <label for="captcha">Please type this code</label>
+                    <div class="captcha-box" id="generated-captcha"></div>
+                    <input type="text" name="captcha" id="captcha" required>
+                </div>
+                <div class="item-flex">
+                    <button id="send" class="button" type="submit">Send</button>
+                </div>
+            </div>
+        </form>
+        <div id="confirmation-message" class="confirmation-message fade-in">
+            Sent
+        </div>
+    </div>
+    <footer class="bg-g">
+        <div class="cont">
+            <div class="social">
+                <a href="#"><i class="fa fa-facebook-official"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-youtube"></i></a>
+                <a href="#"><i class="fa fa-apple"></i></a>
+                <a href="#"><i class="fa fa-spotify"></i></a>
+                <a href="#"><i class="fa fa-soundcloud"></i></a>
+            </div>
+            <p class="copyright">@All Rights Reserved</p>
+        </div>
+    </footer>
+    <script src="scritps/captcha.js"></script>
+</body>
+</html>
